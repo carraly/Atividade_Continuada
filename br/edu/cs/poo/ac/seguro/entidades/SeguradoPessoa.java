@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 public class SeguradoPessoa extends Segurado {
     private String cpf;
     private double renda;
