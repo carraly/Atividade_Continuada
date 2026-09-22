@@ -1,3 +1,12 @@
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.AllArgsConstructor;
+
+@Getter
+@Setter
+@AllArgsConstructor
 public class Sinistro {
     private String numero;
     private Veiculo veiculo;
@@ -6,71 +15,4 @@ public class Sinistro {
     private String usuarioRegistro;
     private BigDecimal valorSinistro;
     private TipoSinistro tipo;
-    
-    public Sinistro(String numero, Veiculo veiculo, LocalDateTime dataHoraSinistro, LocalDateTime dataHoraRegistro,
-            String usuarioRegistro, BigDecimal valorSinistro, TipoSinistro tipo) {
-        this.numero = numero;
-        this.veiculo = veiculo;
-        this.dataHoraSinistro = dataHoraSinistro;
-        this.dataHoraRegistro = dataHoraRegistro;
-        this.usuarioRegistro = usuarioRegistro;
-        this.valorSinistro = valorSinistro;
-        this.tipo = tipo;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public Veiculo getVeiculo() {
-        return veiculo;
-    }
-
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
-    }
-
-    public LocalDateTime getDataHoraSinistro() {
-        return dataHoraSinistro;
-    }
-
-    public void setDataHoraSinistro(LocalDateTime dataHoraSinistro) {
-        this.dataHoraSinistro = dataHoraSinistro;
-    }
-
-    public LocalDateTime getDataHoraRegistro() {
-        return dataHoraRegistro;
-    }
-
-    public void setDataHoraRegistro(LocalDateTime dataHoraRegistro) {
-        this.dataHoraRegistro = dataHoraRegistro;
-    }
-
-    public String getUsuarioRegistro() {
-        return usuarioRegistro;
-    }
-
-    public void setUsuarioRegistro(String usuarioRegistro) {
-        this.usuarioRegistro = usuarioRegistro;
-    }
-
-    public BigDecimal getValorSinistro() {
-        return valorSinistro;
-    }
-
-    public void setValorSinistro(BigDecimal valorSinistro) {
-        this.valorSinistro = valorSinistro;
-    }
-
-    public TipoSinistro getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoSinistro tipo) {
-        this.tipo = tipo;
-    }
 }
