@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class SeguradoEmpresa extends Segurado{
+public class SeguradoEmpresa extends Segurado {
     private String cnpj;
     private double faturamento;
     private boolean ehLocadoraDeVeiculos;
