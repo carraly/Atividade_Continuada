@@ -5,6 +5,12 @@ import java.time.LocalDate;
 import br.edu.cs.poo.ac.seguro.entidades.Endereco;
 
 public class SeguradoMediator {
+    private static SeguradoMediator instancia = new SeguradoMediator();
+
+    private SeguradoMediator() {
+
+    }
+
 	public String validarNome(String nome) {
 		return null;
 	}
@@ -17,4 +23,8 @@ public class SeguradoMediator {
 	public BigDecimal ajustarDebitoBonus(BigDecimal bonus, BigDecimal valorDebito) {
 		return null;
 	}
+
+    public static SeguradoMediator getInstancia() {
+        return instancia;
+    }
 }
