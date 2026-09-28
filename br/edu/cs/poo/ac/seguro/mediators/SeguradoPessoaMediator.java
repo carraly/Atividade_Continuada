@@ -4,6 +4,14 @@ import br.edu.cs.poo.ac.seguro.daos.SeguradoPessoaDAO;
 import br.edu.cs.poo.ac.seguro.entidades.SeguradoPessoa;
 
 public class SeguradoPessoaMediator {
+    SeguradoMediator seguradoMediator = SeguradoMediator.getInstancia();
+    SeguradoPessoaDAO seguradoPessoaDAO = new SeguradoPessoaDAO();
+    private static SeguradoPessoaMediator instancia = new SeguradoPessoaMediator();
+
+    private SeguradoPessoaMediator() {
+
+    }
+
 	public String validarCpf(String cpf) {
 		return null;
 	}
@@ -25,4 +33,8 @@ public class SeguradoPessoaMediator {
 	public String validarSeguradoPessoa(SeguradoPessoa seg) {
 		return null;
 	}
+
+    public static SeguradoPessoaMediator getInstancia() {
+        return instancia;
+    }
 }
