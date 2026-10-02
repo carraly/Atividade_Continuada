@@ -2,6 +2,10 @@ package br.edu.cs.poo.ac.seguro.mediators;
 
 public class ValidadorCpfCnpj {
 	public static boolean ehCnpjValido(String cnpj) {
+		if (StringUtils.temSomenteNumeros(cnpj) == false) {
+			return false;			
+		}
+
 		if (cnpj.length() != 14) {
             return false;
         }
@@ -65,6 +69,10 @@ public class ValidadorCpfCnpj {
 	}
 	
 	public static boolean ehCpfValido(String cpf) {
+		if (StringUtils.temSomenteNumeros(cpf) == false) {
+			return false;			
+		}
+
         if (cpf.length() != 11) {
             return false;
         }
