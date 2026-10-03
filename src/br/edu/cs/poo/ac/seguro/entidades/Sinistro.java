@@ -1,3 +1,5 @@
+package br.edu.cs.poo.ac.seguro.entidades;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import lombok.Getter;
