@@ -37,7 +37,7 @@ public class ValidadorCpfCnpj {
 		if (restoDivisao < 2) {
 			digitoVerificador = 0;
 		}else {
-			digitoVerificador = 11 - restoDivisao;
+			digitoVerificador = 11 - (int)restoDivisao;
 		}
 
 		if (Character.getNumericValue(cnpj.charAt(indexDigitoVerificador)) != digitoVerificador) {
@@ -58,7 +58,7 @@ public class ValidadorCpfCnpj {
 		if (restoDivisao < 2) {
 			digitoVerificador = 0;
 		}else {
-			digitoVerificador = 11 - restoDivisao;
+			digitoVerificador = 11 - (int)restoDivisao;
 		}
 
 		if (Character.getNumericValue(cnpj.charAt(indexDigitoVerificador)) != digitoVerificador) {
@@ -101,7 +101,7 @@ public class ValidadorCpfCnpj {
 		if (restoDivisao < 2) {
 			digitoVerificador = 0;
 		}else {
-			digitoVerificador = 11 - restoDivisao;
+			digitoVerificador = 11 - (int)restoDivisao;
 		}
 
 		if (Character.getNumericValue(cpf.charAt(indexDigitoVerificador)) != digitoVerificador) {
@@ -122,7 +122,7 @@ public class ValidadorCpfCnpj {
 		if (restoDivisao < 2) {
 			digitoVerificador = 0;
 		}else {
-			digitoVerificador = 11 - restoDivisao;
+			digitoVerificador = 11 - (int)restoDivisao;
 		}
 
 		if (Character.getNumericValue(cpf.charAt(indexDigitoVerificador)) != digitoVerificador) {
