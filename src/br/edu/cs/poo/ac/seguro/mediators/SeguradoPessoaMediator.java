@@ -18,13 +18,13 @@ public class SeguradoPessoaMediator {
 		}else if (cpf.length() != 11) {
 			return "CPF deve ter 11 caracteres";
 		}else if (ValidadorCpfCnpj.ehCpfValido(cpf) == false) {
-			return "CPF com d�gito inv�lido";
+			return "CPF com d\u00EDgito inv\u00E1lido";
 		}
 		return null;
 	}
 	public String validarRenda(double renda) {
 		if (renda < 0) {
-			return "Renda deve ser maior ou igual � zero";
+			return "Renda deve ser maior ou igual \u00E0 zero";
 		}
 		return null;
 	}
@@ -34,7 +34,7 @@ public class SeguradoPessoaMediator {
 		if (ret != null) {
 			return ret;
 		}else if (seguradoPessoaDAO.buscar(seg.getCpf()) != null) {
-			return "CPF do segurado pessoa j� existente";
+			return "CPF do segurado pessoa j\u00E1 existente";
 		}
 
 		seguradoPessoaDAO.incluir(seg);
@@ -46,7 +46,7 @@ public class SeguradoPessoaMediator {
 		if (ret != null) {
 			return ret;
 		}else if (seguradoPessoaDAO.buscar(seg.getCpf()) == null) {
-			return "CPF do segurado pessoa n�o existente";
+			return "CPF do segurado pessoa n\u00E3o existente";
 		}
 
 		seguradoPessoaDAO.alterar(seg);
@@ -54,7 +54,7 @@ public class SeguradoPessoaMediator {
 	}
 	public String excluirSeguradoPessoa(String cpf) {
 		if (seguradoPessoaDAO.buscar(cpf) == null) {
-			return "CPF do segurado pessoa n�o existente";
+			return "CPF do segurado pessoa n\u00E3o existente";
 		}
 
 		seguradoPessoaDAO.excluir(cpf);
@@ -67,13 +67,13 @@ public class SeguradoPessoaMediator {
 		if (StringUtils.ehNuloOuBranco(seg.getNome()) == true) {
 			return "Nome deve ser informado";
 		}else if (seg.getEndereco() == null) {
-			return "Endere�o deve ser informado";
+			return "Endere\u00E7o deve ser informado";
 		}else if (seg.getDataNascimento() == null) {
 			return "Data do nascimento deve ser informada";
 		}else if (ValidadorCpfCnpj.ehCpfValido(seg.getCpf()) == false) {
-			return "CPF com d�gito inv�lido";
+			return "CPF com d\u00EDgito inv\u00E1lido";
 		}else if (seg.getRenda() < 0) {
-			return "Renda deve ser maior ou igual � zero";
+			return "Renda deve ser maior ou igual \u00E0 zero";
 		}
 		return null;
 	}

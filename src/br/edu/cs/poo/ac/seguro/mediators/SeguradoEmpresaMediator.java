@@ -18,7 +18,7 @@ public class SeguradoEmpresaMediator {
 		}else if (cnpj.length() != 14) {
 			return "CNPJ deve ter 14 caracteres";
 		}else if (ValidadorCpfCnpj.ehCnpjValido(cnpj) == false) {
-			return "CNPJ com d�gito inv�lido";
+			return "CNPJ com d\u00EDgito inv\u00E1lido";
 		}
 		return null;
 	}
@@ -34,7 +34,7 @@ public class SeguradoEmpresaMediator {
 		if (ret != null) {
 			return ret;
 		}else if (seguradoEmpresaDAO.buscar(seg.getCnpj()) != null) {
-			return "CNPJ do segurado empresa j� existente";
+			return "CNPJ do segurado empresa j\u00E1 existente";
 		}
 
 		seguradoEmpresaDAO.incluir(seg);
@@ -46,7 +46,7 @@ public class SeguradoEmpresaMediator {
 		if (ret != null) {
 			return ret;
 		}else if (seguradoEmpresaDAO.buscar(seg.getCnpj()) == null) {
-			return "CNPJ do segurado empresa n�o existente";
+			return "CNPJ do segurado empresa n\u00E3o existente";
 		}
 
 		seguradoEmpresaDAO.alterar(seg);
@@ -54,7 +54,7 @@ public class SeguradoEmpresaMediator {
 	}
 	public String excluirSeguradoEmpresa(String cnpj) {
 		if (seguradoEmpresaDAO.buscar(cnpj) == null) {
-			return "CNPJ do segurado empresa n�o existente";
+			return "CNPJ do segurado empresa n\u00E3o existente";
 		}
 
 		seguradoEmpresaDAO.excluir(cnpj);
@@ -67,11 +67,11 @@ public class SeguradoEmpresaMediator {
 		if (StringUtils.ehNuloOuBranco(seg.getNome()) == true) {
 			return "Nome deve ser informado";
 		}else if (seg.getEndereco() == null) {
-			return "Endere�o deve ser informado";
+			return "Endere\u00E7o deve ser informado";
 		}else if (seg.getDataAbertura() == null) {
 			return "Data da abertura deve ser informada";
 		}else if (ValidadorCpfCnpj.ehCnpjValido(seg.getCnpj()) == false) {
-			return "CNPJ com d�gito inv�lido";
+			return "CNPJ com d\u00EDgito inv\u00E1lido";
 		}else if (seg.getFaturamento() <= 0) {
 			return "Faturamento deve ser maior que zero";
 		}

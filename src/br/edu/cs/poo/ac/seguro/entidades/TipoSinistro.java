@@ -1,11 +1,11 @@
 package br.edu.cs.poo.ac.seguro.entidades;
 
 public enum TipoSinistro {
-	COLISAO(1,"Colisão"),
-	INCENDIO(2,"Incêndio"),
+	COLISAO(1,"Colis\u00E3o"),
+	INCENDIO(2,"Inc\u00EAndio"),
 	FURTO(3, "Furto"),
 	ENCHENTE(4, "Enchente"),
-	DEPREDACAO(5, "Depredação");
+	DEPREDACAO(5, "Depreda\u00E7\u00E3o");
 
 	private final int codigo;
 	private final String nome;
